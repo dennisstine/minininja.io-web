@@ -5,6 +5,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
@@ -14,8 +17,10 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
  *
  * Created by Dennis on 4/14/2017.
  */
+@RunWith(SpringJUnit4ClassRunner.class)
 public class IndexControllerTest {
 
+    @InjectMocks
     private IndexController controller;
 
     private MockMvc mvc;
