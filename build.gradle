@@ -23,13 +23,16 @@ repositories {
     mavenCentral()
 }
 
+bootRun {
+    addResources = true
+}
 
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-thymeleaf')
     compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.springframework.boot:spring-boot-devtools')
     compile('org.webjars:jquery:3.2.0')
     compile('org.webjars:bootstrap:3.3.7-1')
     compile('org.webjars:font-awesome:4.7.0')
-    compile('org.webjars:animate.css:3.5.2')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
