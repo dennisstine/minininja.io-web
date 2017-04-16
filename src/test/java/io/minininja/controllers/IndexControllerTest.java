@@ -40,6 +40,7 @@ public class IndexControllerTest {
         mvc.perform(get("/"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("index"))
+                .andExpect(model().attribute("fragmentInclude", "home"))
                 .andExpect(forwardedUrl("/index.html"));
     }
 }
