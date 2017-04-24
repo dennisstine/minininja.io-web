@@ -4,6 +4,3 @@ machine:
 dependencies:
   override:
      - chmod +x gradlew
- general:
-   artifacts:
-     - "build/reports/jacoco"
