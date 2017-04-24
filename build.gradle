@@ -36,3 +36,15 @@ dependencies {
     compile('org.webjars:font-awesome:4.7.0')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
+
+jacoco {
+    toolVersion = "0.7.9"
+}
+
+test {
+    jacoco {
+        append = false
+        destinationFile = file("$buildDir/jacoco/test.exec")
+        classDumpDir = file("$buildDir/jacoco/classpathdumps")
+    }
+}
